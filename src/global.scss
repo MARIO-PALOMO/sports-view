@@ -35,3 +35,41 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+ion-card {
+    border-radius: 15px !important;
+}
+
+.container {
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.card{
+    background-color: #503e9225;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #503E92; /* Color de fondo del div */
+    color: white;
+    padding-top: 15px;
+    padding-left: 19px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+    z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+    font-size: 30px;
+}
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}

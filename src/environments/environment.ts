@@ -3,7 +3,22 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    url: "https://sports-api-c43e1b5f868a.herokuapp.com/api/"
+  },
+  endpoints: {
+    competitions: {
+      getAll: {
+        path: "competitions/getAll"
+      }
+    },
+    teams: {
+      getAll: {
+        path: "teams/getAll"
+      }
+    }
+  }
 };
 
 /*

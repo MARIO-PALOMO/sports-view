@@ -1,0 +1,33 @@
+/* CSS */
+ion-card {
+    --margin-top: 16px;
+    --margin-bottom: 16px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .spacer {
+    height: 20px; /* Ajusta la altura según sea necesario */
+  }
+  
+  .info {
+    padding: 16px;
+    border-top: 1px solid #dcdcdc;
+  }
+  
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .value {
+    color: #666;
+  }
+  

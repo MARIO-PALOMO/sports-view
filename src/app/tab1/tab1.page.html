@@ -1,17 +1,69 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+  <div class="fixed-top">
+    <ion-icon name="menu"></ion-icon>
+  </div>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <ion-card class="card">
+      <img alt="Copa Wambras" src="{{dtsCompetition?.logo_1}}" style="padding: 20px;" />
+      <ion-card-header>
+        <ion-card-title>{{dtsCompetition?.name}}</ion-card-title>
+        <ion-card-subtitle>{{dtsCompetition?.description}}</ion-card-subtitle>
+      </ion-card-header>
+      <br>
+    </ion-card>
+    <br>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-icon name="people"></ion-icon> Organizador</ion-card-title>
+        <ion-card-subtitle>{{dtsCompetition?.organizer}}</ion-card-subtitle>
+        <br>
+        <ion-card-title><ion-icon name="calendar"></ion-icon> Duracion</ion-card-title>
+        <div style="padding-top: 10px;">
+          <table style="width: 100%;" border="0">
+            <tr>
+              <td><ion-card-subtitle><b>Desde:</b></ion-card-subtitle></td>
+              <td><ion-card-subtitle>{{ formatDateToSpanish(dtsCompetition?.start_date) }}</ion-card-subtitle></td>
+            </tr>
+            <tr>
+              <td><ion-card-subtitle><b>Hasta:</b></ion-card-subtitle></td>
+              <td><ion-card-subtitle>{{ formatDateToSpanish(dtsCompetition?.end_date) }}</ion-card-subtitle></td>
+            </tr>
+          </table>
+        </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+      </ion-card-header>
+    </ion-card>
+    <br>
+    <table style="width: 100%; text-align: center;" border="0">
+      <tr>
+        <td style="width: 50%;">
+          <ion-card class="hover" (click)="getReglamentos()">
+            <ion-card-header>
+              <ion-card-subtitle>
+                <b><ion-icon name="book" style="font-size: 30px;"></ion-icon><br>&nbsp;&nbsp; Reglamento</b>
+              </ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </td>
+        <td>
+          <ion-card class="hover" (click)="getPremios()">
+            <ion-card-header>
+              <ion-card-subtitle><ion-icon name="trophy" style="font-size: 30px;"></ion-icon><br>&nbsp;&nbsp;
+                <b>Premios</b></ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </td>
+      </tr>
+    </table>
+
+    <p style="text-align:  center;">
+      <img src="assets/img/logo-quito.png" alt="" style="width: 150px">
+    </p>
+
+
+
+  </div>
+
 </ion-content>
